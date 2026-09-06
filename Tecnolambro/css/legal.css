@@ -1,0 +1,78 @@
+/* Lightweight stylesheet for legal pages: no GSAP, no heavy motion.
+   Priority here is readability and fast load, not spectacle (brief sec. 16). */
+@import url('style.css');
+
+body { overflow-x: initial; }
+
+.legal-header {
+  position: static;
+  background: var(--blue-900);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.legal-main {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: clamp(6.5rem, 12vw, 9rem) var(--gutter) clamp(4rem, 8vw, 6rem);
+}
+.legal-main h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.15;
+}
+.legal-main .updated {
+  margin-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--steel-400);
+}
+.legal-notice {
+  margin-top: 2rem;
+  padding: 1.1rem 1.3rem;
+  border-left: 2px solid var(--red-500);
+  background: rgba(209, 59, 63, 0.08);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--steel-100);
+}
+.legal-body { margin-top: 2.6rem; }
+.legal-body h2 {
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+}
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body p, .legal-body li {
+  color: var(--steel-200);
+  line-height: 1.7;
+  font-size: 0.96rem;
+}
+.legal-body p + p { margin-top: 0.9rem; }
+.legal-body ul { margin-top: 0.6rem; padding-left: 1.2rem; list-style: disc; display: grid; gap: 0.5rem; }
+.legal-body a { text-decoration: underline; color: var(--steel-100); }
+.legal-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+}
+.legal-body th, .legal-body td {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid rgba(210,226,240,0.12);
+  color: var(--steel-200);
+}
+.legal-body th { color: var(--white); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--blue-300);
+}
